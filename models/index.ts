@@ -1,5 +1,5 @@
 import { initializeAndAssociate } from "lib/db";
-import { Sequelize, Options } from "sequelize";
+import { Sequelize, Options, Dialect } from "sequelize";
 
 const dbConfig: Options = {
   username: process.env.DB_USERNAME!,
@@ -7,7 +7,7 @@ const dbConfig: Options = {
   host: process.env.HOST!,
   port: +process.env.PORT!,
   database: process.env.DB_NAME!,
-  dialect: "mysql"
+  dialect: (process.env.DB_DIALECT! as Dialect)
 }
 const sequelize = new Sequelize(dbConfig);
 
