@@ -1,0 +1,32 @@
+{
+  "compilerOptions": {
+    "baseUrl": ".",
+    "module": "esnext",
+    "moduleResolution": "node",
+    "incremental": true,
+    "target": "es5",
+    "lib": [
+      "ES6"
+    ],
+    "paths": {
+      "@/*": ["./"],
+      "@models/*": ["./models/*.ts"],
+    },
+    "allowJs": true,
+    "rootDir": ".",
+    "outDir": "dist",
+    "strict": true,
+    "noImplicitAny": false,
+    "resolveJsonModule": true,
+    "allowSyntheticDefaultImports": true,
+
+  },
+  "include": [
+    ".",
+  ],
+  "exclude": [
+    "node_modules",
+    "dist"
+  ],
+  
+}
